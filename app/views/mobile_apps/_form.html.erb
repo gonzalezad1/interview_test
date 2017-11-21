@@ -1,0 +1,27 @@
+<%= form_with(model: mobile_app, local: true) do |form| %>
+  <% if mobile_app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mobile_app.errors.count, "error") %> prohibited this mobile_app from being saved:</h2>
+
+      <ul>
+      <% mobile_app.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :mobile_app_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :store_ids %>
+    <%= form.text_field :store_ids, id: :mobile_app_store_ids %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

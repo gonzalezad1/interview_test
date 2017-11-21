@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mobile_app.name %>
+</p>
+
+<p>
+  <strong>Store ids:</strong>
+  <%= @mobile_app.store_ids %>
+</p>
+
+<%= link_to 'Edit', edit_mobile_app_path(@mobile_app) %> |
+<%= link_to 'Back', mobile_apps_path %>

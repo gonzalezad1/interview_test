@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mobile Apps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Store ids</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mobile_apps.each do |mobile_app| %>
+      <tr>
+        <td><%= mobile_app.name %></td>
+        <td><%= mobile_app.store_ids %></td>
+        <td><%= link_to 'Show', mobile_app %></td>
+        <td><%= link_to 'Edit', edit_mobile_app_path(mobile_app) %></td>
+        <td><%= link_to 'Destroy', mobile_app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mobile App', new_mobile_app_path %>

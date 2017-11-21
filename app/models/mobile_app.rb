@@ -1,0 +1,2 @@
+class MobileApp < ApplicationRecord
+end
